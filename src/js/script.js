@@ -49,7 +49,10 @@ const listaMusicas = document.querySelector('.listaMusicas');
 const tagAudio = document.getElementById('saidaAudio');
 const primeiraMusica = baseMusicas[0];
 tagAudio.src = primeiraMusica.path;
-console.log(tagAudio);
+
+const botaoPausar = document.getElementById('btnPause');
+
+const botaoPlay = document.getElementById('btnControlPlay');
 
 function construirPlayList(musica, musicaId){   
     const musicaElemento = document.createElement('li');
@@ -80,9 +83,26 @@ for(let contador = 0; contador < baseMusicas.length; contador++) {
 
 function tocarMusica(evento){
     const elementoClicado = evento.currentTarget;
-    const musicaId = elementoClicado.dataset.id;
 
-    const musicaSelecionada = baseMusicas[musicaId];
-    tagAudio.src = musicaSelecionada.path;
-    tagAudio.play();
+    if(elementoClicado.tagName == 'LI'){
+        const musicaId = elementoClicado.dataset.id;
+        const musicaSelecionada = baseMusicas[musicaId];
+        tagAudio.src = musicaSelecionada.path;
+        tagAudio.play();
+    }
+    else{
+        if(tagAudio.paused){
+            tagAudio.play();
+        } else{
+            tagAudio.pause();
+        }
+    }
 }
+
+botaoPlay.addEventListener('click', tocarMusica);
+
+function pausarMusica(){
+    tagAudio.pause();
+}
+botaoPausar.addEventListener('click', pausarMusica);
+
