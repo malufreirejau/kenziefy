@@ -7,25 +7,25 @@
     </head>
     <body>
         <main>
-            <aside>
-                <img src="" alt="Logo Kenziefy">
-                <nav>
-                    <ul>
+            <aside class="sidebarMenuNavegacao">
+                <img src="./src/img/logo.png" alt="Logo Kenziefy">
+                <nav class="menuNavegacao">
+                    <ul class="listaLinks">
                         <li>
                             <a href="">
-                                <img src="" alt="Home">
+                                <img src="./src/img/icone1.png" alt="Home">
                                 Home
                             </a>
                         </li>
                        <li>
                             <a href="">
-                                <img src="" alt="Browse">
+                                <img src="./src/img/icone2.png" alt="Browse">
                                 Browse
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="" alt="Liked songs">
+                                <img src="./src/img/icone3.png" alt="Liked songs">
                                 Liked songs
                             </a>
                         </li>
@@ -33,7 +33,68 @@
                 </nav>
             </aside>
 
+            <section class="sessaoMusicas">
+                <header class="cabecalho">
+                    <div class="user">
+                        <img src="./src/img/user.png" alt="Usuário">
+                        <h2>Malu</h2>
+                    </div>
+                    <div class="qtdMusicas">
+                        <p>1158 songs</p>
+                    </div>                    
+                </header>
+                <div class="areaListaMusicas">
+                    <button id="btnPause">Pause</button>
+
+                    <div class="cabecalhoInfoMusicas">
+                        <p>TITLE</p>
+                        <p>ARTIST</p>
+                        <p>ALBUM</p>
+                    </div>
+
+                    <ul class="ListaMusicas">
+                        <li>
+                            <p>0 Good Enough</p>
+                            <p>MeiaUm</p>
+                            <p>GoodEnough</p>
+                        </li>
+                        <li>
+                            <p>1 Good Enough</p>
+                            <p>MeiaUm</p>
+                            <p>GoodEnough</p>
+                        </li>
+                        <li>
+                            <p>2 Good Enough</p>
+                            <p>MeiaUm</p>
+                            <p>GoodEnough</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="areaPlayer">
+                <div class="infoMusicaAtual">
+                    <figure class="imagemAlbum">
+                        <img src="./src/img/album4.png" alt="album"> 
+                        <figcaption>Legenda</figcaption>                       
+                    </figure>
+
+                    <h2>square one</h2>
+                    <p>Coldplay</p>                    
+                </div>
+                <div class="areaPlayerControles">
+                    <button id="btnControlPrev">Musica anterior</button>
+                    <button id="btnControlPlay">Play/Pause</button>
+                    <button id="btnControlNext">Proxima musica</button>
+                </div>
+                <div class="areaPlayerVolume">
+                    <input type="range" value="1" step="0.1">
+                </div>
+            </section>
+
         </main>
 
     </body>
+
 </html>
