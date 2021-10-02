@@ -1,100 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+    
+    <!-- CABEÇALHO DE CONFIGURAÇÃO -->
     <head>
         <meta charset="UTF-8">
         <title>KenzieFy Malu</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     </head>
+   
+    <!-- CORPO -->
     <body>
+
+        <!-- TAG CONTEÚDO MAIS IMPORTANTE -->
         <main>
+           
+            <!-- MENU DE OPÇÕES -->
             <aside class="sidebarMenuNavegacao">
+
+                <!-- LOGO  -->
                 <img src="./src/img/logo.png" alt="Logo Kenziefy">
+
+                <!-- MENU -->
                 <nav class="menuNavegacao">
+
+                    <!-- LISTA DE LINKS -->
                     <ul class="listaLinks">
+
+                        <!-- ITEM DE LISTA -->
                         <li>
-                            <a href="">
+                            <a href="https://kenzie.com.br/">
                                 <img src="./src/img/icone1.png" alt="Home">
                                 Home
                             </a>
                         </li>
-                       <li>
-                            <a href="">
+                        
+                        <!-- ITEM DE LISTA -->
+                        <li>
+                            <a href="https://kenzie.com.br/">
                                 <img src="./src/img/icone2.png" alt="Browse">
                                 Browse
                             </a>
                         </li>
+
+                        <!-- ITEM DE LISTA -->
                         <li>
-                            <a href="">
+                            <a href="https://kenzie.com.br/">
                                 <img src="./src/img/icone3.png" alt="Liked songs">
                                 Liked songs
                             </a>
                         </li>
+
                     </ul>
+
                 </nav>
+
+
             </aside>
 
-            <section class="sessaoMusicas">
+            <!-- SEÇÃO LISTA DE MUSICA -->
+            <section class="secaoMusicas">
+                
+                <!-- CABEÇALHO DA SEÇÃO DE MUSICA -->
                 <header class="cabecalho">
+
                     <div class="user">
-                        <img src="./src/img/user.png" alt="Usuário">
+                        <img src="./src/img/user.png" alt="Malu">
                         <h2>Malu</h2>
                     </div>
+
                     <div class="qtdMusicas">
                         <p>1158 songs</p>
-                    </div>                    
-                </header>
-                <div class="areaListaMusicas">
-                    <button id="btnPause">Pause</button>
+                    </div>
 
+                </header>
+
+                <!-- LISTA DE MUSICA -->
+                <div class="areaListaMusicas">
+                    <!-- BOTÃO DE PAUSE  -->
+                    <button id="btnPause">Pause</button>
+                    
+                    <!-- CABEÇALHO QUE REPRESENTA AS INFORMAÇÕES DAS MUSICAS -->
                     <div class="cabecalhoInfoMusicas">
-                        <p>TITLE</p>
+                        <p class="primeiroItem">TITLE</p>
                         <p>ARTIST</p>
                         <p>ALBUM</p>
                     </div>
-
-                    <ul class="ListaMusicas">
-                        <li>
-                            <p>0 Good Enough</p>
+                    
+                    <!-- LISTA DE MUSICA -->
+                    <ul class="listaMusicas">
+                        <!-- MUSICA -->
+                        <li>    
+                            <p class="primeiroItem">0 Good Enough</p>
                             <p>MeiaUm</p>
-                            <p>GoodEnough</p>
+                            <p>Good Enough</p>
                         </li>
-                        <li>
-                            <p>1 Good Enough</p>
+                        <!-- MUSICA -->
+                        <li>    
+                            <p class="primeiroItem">1 Good Enough</p>
                             <p>MeiaUm</p>
-                            <p>GoodEnough</p>
+                            <p>Good Enough</p>
                         </li>
-                        <li>
-                            <p>2 Good Enough</p>
+                        <!-- MUSICA -->
+                        <li>    
+                            <p class="primeiroItem">2 Good Enough</p>
                             <p>MeiaUm</p>
-                            <p>GoodEnough</p>
+                            <p>Good Enough</p>
                         </li>
                     </ul>
 
                 </div>
+
             </section>
-
+            
+            <!-- PLAYER -->
             <section class="areaPlayer">
-                <div class="infoMusicaAtual">
-                    <figure class="imagemAlbum">
-                        <img src="./src/img/album4.png" alt="album"> 
-                        <figcaption>Legenda</figcaption>                       
-                    </figure>
 
-                    <h2>square one</h2>
-                    <p>Coldplay</p>                    
+                <div class="infoMusicaAtual">
+                    
+                    <figure class="imagemAlbum">
+                        <img src="./src/img/album4.png" alt="Album">
+                        <figcaption>Legenda</figcaption>
+                    </figure>
+                   
+                    <div class="infoAlbum">
+                        <h2>Square One</h2>
+                        <p>Coldplay</p>
+                    </div>
                 </div>
+
                 <div class="areaPlayerControles">
-                    <button id="btnControlPrev">Musica anterior</button>
-                    <button id="btnControlPlay">Play/Pause</button>
-                    <button id="btnControlNext">Proxima musica</button>
+                    <button id="btnControlPrev"></button>
+                    <button id="btnControlPlay"></button>
+                    <button id="btnControlNext"></button>
                 </div>
+
                 <div class="areaPlayerVolume">
                     <input type="range" value="1" step="0.1">
                 </div>
+
             </section>
 
         </main>
-
+       
     </body>
 
 </html>
