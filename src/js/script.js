@@ -51,8 +51,9 @@ const primeiraMusica = baseMusicas[0];
 tagAudio.src = primeiraMusica.path;
 
 const botaoPausar = document.getElementById('btnPause');
-
 const botaoPlay = document.getElementById('btnControlPlay');
+
+let musicaAtual = 0;
 
 function construirPlayList(musica, musicaId){   
     const musicaElemento = document.createElement('li');
@@ -88,9 +89,10 @@ function tocarMusica(evento){
         const musicaId = elementoClicado.dataset.id;
         const musicaSelecionada = baseMusicas[musicaId];
         tagAudio.src = musicaSelecionada.path;
+        musicaAtual = Number(musicaId);
         tagAudio.play();
-    }
-    else{
+       
+    } else{
         if(tagAudio.paused){
             tagAudio.play();
         } else{
@@ -105,4 +107,31 @@ function pausarMusica(){
     tagAudio.pause();
 }
 botaoPausar.addEventListener('click', pausarMusica);
+
+
+function tocarProximaMusica(){
+    if(musicaAtual === baseMusicas.length - 1){
+        musicaAtual = 0;
+    } else{
+        musicaAtual++;
+    }
+
+    tagAudio.src = baseMusicas[musicaAtual].path
+    tagAudio.play();
+}
+const btnControlNext = document.getElementById('btnControlNext');
+btnControlNext.addEventListener('click', tocarProximaMusica)
+
+function tocarMusicaAnterior(){
+    if(musicaAtual === 0){
+        musicaAtual = baseMusicas.length - 1;
+    } else{
+        musicaAtual--;
+    }
+
+    tagAudio.src = baseMusicas[musicaAtual].path
+    tagAudio.play();
+}
+const bthControlPrev = document.getElementById('btnControlPrev');
+btnControlPrev.addEventListener('click', tocarMusicaAnterior)
 
